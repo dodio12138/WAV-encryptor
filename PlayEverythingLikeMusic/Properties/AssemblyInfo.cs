@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("PlayEverythingLikeMusic")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyCompany("Levy Flight Studio")]
 [assembly: AssemblyProduct("PlayEverythingLikeMusic")]
-[assembly: AssemblyCopyright("Copyright © HP Inc. 2023")]
+[assembly: AssemblyCopyright("Copyright © Levy Flight Studio. 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

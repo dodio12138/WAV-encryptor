@@ -6,10 +6,24 @@
         xmlns:local="clr-namespace:PlayEverythingLikeMusic"
         mc:Ignorable="d"
         Title="PlayEverythingLikeMusic" Height="400" Width="400" 
-        ResizeMode="NoResize" Background="#FF6F6F6F" 
-        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" Background="#FF151515" 
+        WindowStartupLocation="CenterScreen" AllowDrop="True" Drop="mediaPlayer_Drop"
         >
-    <Grid>
-        
+    <Grid AllowDrop="True">
+        <MediaElement Name="mediaPlayer" Height="200" Margin="0,49,0,0" Width="350" LoadedBehavior="Manual" UnloadedBehavior="Stop" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled" AllowDrop="True" DragEnter="mediaPlayer_DragEnter" Drop="mediaPlayer_Drop" Panel.ZIndex="-1" MediaOpened="mediaPlayer_MediaOpened" />
+        <Slider Name="progressSlider" Margin="0,150,0,0" Width="300" Height="18" ScrollViewer.VerticalScrollBarVisibility="Disabled" ValueChanged="progressSlider_ValueChanged" IsMoveToPointEnabled="True" Interval="12" LargeChange="0" Foreground="#FFE5E5E5"/>
+        <Grid Grid.Row="3" Grid.Column="1" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.RowSpan="3" Height="100" VerticalAlignment="Bottom">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Name="playButton" Content="播放" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"  Width="75" Click="playButton_Click" Background="#FF9A0000" BorderBrush="White" />
+            <Button Name="pauseButton" Content="暂停" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="pauseButton_Click" />
+            <Button Name="stopButton" Content="停止" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="75" Grid.Column="2" Click="stopButton_Click" />
+        </Grid>
     </Grid>
 </Window>
